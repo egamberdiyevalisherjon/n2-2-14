@@ -7,6 +7,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #fafafb;
 }
 
 ul {
@@ -460,4 +462,21 @@ button {
 
 .t-shadow-dark {
   text-shadow: 0 0 20px #111;
+}
+
+header#main-header .main-nav-item {
+  position: relative;
+}
+header#main-header .main-nav-item::after {
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #4e52e6;
+  transition: all 0.3s ease-in-out;
+}
+header#main-header .main-nav-item:hover::after, header#main-header .main-nav-item.active::after {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

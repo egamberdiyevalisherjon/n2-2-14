@@ -1,4 +1,18 @@
 header#main-header {
+  .side-bar {
+    display: none;
+
+    @include onMobile {
+      display: block;
+    }
+  }
+
+  .main-nav-items {
+    @include onMobile {
+      display: none;
+    }
+  }
+
   .main-nav-item {
     position: relative;
 

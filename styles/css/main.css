@@ -35,6 +35,11 @@ button {
   width: 1200px;
   margin: 0 auto;
 }
+@media (max-width: 1200px) {
+  .container {
+    width: 500px;
+  }
+}
 
 .flex {
   display: flex;
@@ -464,6 +469,19 @@ button {
   text-shadow: 0 0 20px #111;
 }
 
+header#main-header .side-bar {
+  display: none;
+}
+@media (max-width: 1200px) {
+  header#main-header .side-bar {
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  header#main-header .main-nav-items {
+    display: none;
+  }
+}
 header#main-header .main-nav-item {
   position: relative;
 }

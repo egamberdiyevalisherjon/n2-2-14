@@ -45,6 +45,18 @@ button {
   display: flex;
 }
 
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-3 {
+  flex: 3;
+}
+
 .items-start {
   align-items: start;
 }
@@ -497,4 +509,75 @@ header#main-header .main-nav-item::after {
 }
 header#main-header .main-nav-item:hover::after, header#main-header .main-nav-item.active::after {
   width: 100%;
+}
+
+section#showcase {
+  position: relative;
+}
+@media (max-width: 1200px) {
+  section#showcase .container {
+    flex-direction: column;
+  }
+}
+section#showcase h1 {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+}
+section#showcase p {
+  color: #868686;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+section#showcase .wrapper {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1200px) {
+  section#showcase .wrapper {
+    position: relative;
+  }
+}
+section#showcase .wrapper::before {
+  content: "";
+  width: 500px;
+  height: 500px;
+  border: 10px solid #4e52e6;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  border-radius: 50px;
+  transform: rotate(80deg);
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  section#showcase .wrapper::before {
+    bottom: auto;
+    top: 0;
+    width: 300px;
+    height: 300px;
+  }
+}
+section#showcase .wrapper img {
+  width: 700px;
+}
+section#showcase .wrapper p {
+  color: #c4c4c4;
+  font-size: 144px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  section#showcase .wrapper p {
+    font-size: 64px;
+    line-height: 60px;
+  }
 }/*# sourceMappingURL=main.css.map */

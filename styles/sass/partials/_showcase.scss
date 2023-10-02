@@ -1,0 +1,72 @@
+section#showcase {
+  position: relative;
+
+  @include onMobile {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  h1 {
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+  }
+
+  p {
+    color: map-get($map: $colors, $key: secondary);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .wrapper {
+    position: absolute;
+    right: 0;
+
+    @include onMobile {
+      position: relative;
+    }
+
+    &::before {
+      content: "";
+      width: 500px;
+      height: 500px;
+      border: 10px solid map-get($map: $colors, $key: primary);
+      position: absolute;
+      bottom: 10%;
+      right: 0;
+      border-radius: 50px;
+      transform: rotate(80deg);
+      z-index: -1;
+      @include onMobile {
+        bottom: auto;
+        top: 0;
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    img {
+      width: 700px;
+    }
+
+    p {
+      color: #c4c4c4;
+      font-size: 144px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 110px;
+      text-transform: uppercase;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      @include onMobile {
+        font-size: 64px;
+        line-height: 60px;
+      }
+    }
+  }
+}

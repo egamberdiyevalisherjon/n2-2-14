@@ -1,6 +1,6 @@
-section#showcase {
+section#future {
   position: relative;
-  overflow: hidden  ;
+  overflow: hidden;
 
   @include onMobile {
     .container {
@@ -8,7 +8,7 @@ section#showcase {
     }
   }
 
-  h1 {
+  h2 {
     font-size: 72px;
     font-style: normal;
     font-weight: 700;

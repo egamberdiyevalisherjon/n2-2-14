@@ -755,4 +755,76 @@ section#history .sm {
     -o-object-position: right;
        object-position: right;
   }
+}
+
+section#future {
+  position: relative;
+  overflow: hidden;
+}
+@media (max-width: 1200px) {
+  section#future .container {
+    flex-direction: column;
+  }
+}
+section#future h2 {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 70px;
+}
+section#future p {
+  color: #868686;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+section#future .wrapper {
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 1200px) {
+  section#future .wrapper {
+    position: relative;
+  }
+}
+section#future .wrapper::before {
+  content: "";
+  width: 500px;
+  height: 500px;
+  border: 10px solid #4e52e6;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  border-radius: 50px;
+  transform: rotate(80deg);
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  section#future .wrapper::before {
+    bottom: auto;
+    top: 0;
+    width: 300px;
+    height: 300px;
+  }
+}
+section#future .wrapper img {
+  width: 700px;
+}
+section#future .wrapper p {
+  color: #c4c4c4;
+  font-size: 144px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110px;
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  section#future .wrapper p {
+    font-size: 64px;
+    line-height: 60px;
+  }
 }/*# sourceMappingURL=main.css.map */

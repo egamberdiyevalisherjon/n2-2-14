@@ -11,6 +11,17 @@
   display: flex;
 }
 
+.desktop-flex {
+  display: flex;
+  @include onMobile {
+    display: block;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
 .flex-1 {
   flex: 1;
 }

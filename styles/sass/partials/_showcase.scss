@@ -1,5 +1,6 @@
 section#showcase {
   position: relative;
+  overflow: hidden;
 
   @include onMobile {
     .container {

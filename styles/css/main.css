@@ -25,7 +25,8 @@ a {
   text-decoration: none;
 }
 
-button {
+button,
+.btn {
   all: unset;
   box-sizing: border-box;
   padding: 0.8em 3.4em;
@@ -43,6 +44,19 @@ button {
 
 .flex {
   display: flex;
+}
+
+.desktop-flex {
+  display: flex;
+}
+@media (max-width: 1200px) {
+  .desktop-flex {
+    display: block;
+  }
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .flex-1 {
@@ -513,6 +527,7 @@ header#main-header .main-nav-item:hover::after, header#main-header .main-nav-ite
 
 section#showcase {
   position: relative;
+  overflow: hidden;
 }
 @media (max-width: 1200px) {
   section#showcase .container {
@@ -579,5 +594,165 @@ section#showcase .wrapper p {
   section#showcase .wrapper p {
     font-size: 64px;
     line-height: 60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  section#history .desktop-flex {
+    height: 800px;
+    justify-content: end;
+    flex-direction: column;
+    display: flex;
+  }
+}
+@media (max-width: 1200px) {
+  section#history .flex-1:nth-child(2) {
+    justify-content: end;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+}
+section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child {
+  position: relative;
+}
+section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  border: 10px solid #4e52e6;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  border-radius: 50px;
+  transform: rotate(80deg);
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child::before {
+    bottom: auto;
+    top: 0;
+    width: 300px;
+    height: 300px;
+  }
+}
+section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child .wrapper {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50px;
+  transform: rotate(30deg);
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child .wrapper {
+    width: 100%;
+    transform: skewY(-10deg);
+    border-radius: 0;
+  }
+}
+section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child .wrapper img {
+  transform: scale(1.5) rotate(-30deg);
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:not(:nth-child(2)) .flex-1:first-child .wrapper img {
+    transform: scale(1.5) skewY(10deg);
+  }
+}
+section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2) {
+  position: relative;
+}
+section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2)::before {
+  content: "";
+  width: 400px;
+  height: 400px;
+  border: 10px solid #4e52e6;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  border-radius: 50px;
+  transform: rotate(80deg);
+  z-index: -1;
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2)::before {
+    bottom: auto;
+    top: 0;
+    width: 300px;
+    height: 300px;
+  }
+}
+section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2) .wrapper {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 50px;
+  transform: rotate(30deg);
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2) .wrapper {
+    width: 100%;
+    transform: skewY(-10deg);
+    border-radius: 0;
+  }
+}
+section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2) .wrapper img {
+  transform: scale(1.5) rotate(-30deg);
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:nth-child(2) .flex-1:nth-child(2) .wrapper img {
+    transform: scale(1.5) skewY(10deg);
+  }
+}
+@media (max-width: 1200px) {
+  section#history .desktop-flex:nth-child(2) {
+    flex-direction: column-reverse;
+  }
+}
+section#history h3 {
+  color: #fafafb;
+  font-family: Poppins;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+section#history p {
+  color: #868686;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  width: 300px;
+  margin-block: 2rem;
+}
+@media (max-width: 1200px) {
+  section#history p {
+    width: 100%;
+  }
+}
+section#history .btn {
+  background: #fafafb;
+  color: #111;
+}
+section#history .desktop-flex:not(:first-child) .btn {
+  background: #111;
+  color: #4e52e6;
+  border: 1px solid #fafafb;
+}
+@media (max-width: 1200px) {
+  section#history .lg {
+    display: none;
+  }
+}
+section#history .sm {
+  display: none;
+}
+@media (max-width: 1200px) {
+  section#history .sm {
+    display: block;
+    -o-object-position: right;
+       object-position: right;
   }
 }/*# sourceMappingURL=main.css.map */

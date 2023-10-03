@@ -1,10 +1,10 @@
-section#future {
+section#newsletter {
+  min-height: 800px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 800px;
 
   @include onMobile {
     .container {
@@ -29,7 +29,7 @@ section#future {
 
   .wrapper {
     position: absolute;
-    right: 0;
+    left: 0;
 
     @include onMobile {
       position: relative;
@@ -52,19 +52,10 @@ section#future {
         width: 300px;
         height: 300px;
       }
-
-      @include onSmallScreen {
-        width: 100%;
-        aspect-ratio: 1;
-      }
     }
 
     img {
       width: 700px;
-      @include onSmallScreen {
-        width: 100%;
-        aspect-ratio: 1;
-      }
     }
 
     p {
@@ -81,6 +72,23 @@ section#future {
         font-size: 64px;
         line-height: 60px;
       }
+    }
+  }
+
+  form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: start;
+
+    input {
+      padding: 0.8em;
+      width: 100%;
+    }
+
+    button {
+      background: map-get($map: $colors, $key: primary);
     }
   }
 }

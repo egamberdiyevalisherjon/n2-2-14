@@ -36,6 +36,11 @@ section#history {
           width: 300px;
           height: 300px;
         }
+
+        @include onSmallScreen {
+          width: 100%;
+          aspect-ratio: 1;
+        }
       }
       .wrapper {
         width: 400px;
@@ -80,6 +85,11 @@ section#history {
           top: 0;
           width: 300px;
           height: 300px;
+        }
+
+        @include onSmallScreen {
+          width: 100%;
+          aspect-ratio: 1;
         }
       }
 

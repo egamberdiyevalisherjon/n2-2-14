@@ -5,6 +5,11 @@
   @include onMobile() {
     width: 500px;
   }
+
+  @include onSmallScreen {
+    width: 100%;
+    padding-inline: 12px;
+  }
 }
 
 .flex {
@@ -15,6 +20,13 @@
   display: flex;
   @include onMobile {
     display: block;
+  }
+}
+
+.mobile-flex-column {
+  flex-direction: row;
+  @include onMobile {
+    flex-direction: column;
   }
 }
 
@@ -127,4 +139,8 @@ $sides: (
   .t-shadow-#{$key} {
     text-shadow: 0 0 20px $color;
   }
+}
+
+.text-center {
+  text-align: center;
 }
